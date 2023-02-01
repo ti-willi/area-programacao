@@ -1,0 +1,51 @@
+body {
+    background: bLack;
+    background-size: auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+
+}
+
+.pergunta {
+    color: whitesmoke;
+    font-size: 2em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.label {
+    color: whitesmoke;
+    font-size: 2em;
+    padding-bottom: 0.5em;
+}
+
+.input {
+    width: 250px;
+    padding: 10px;
+    background-color: rgb(12, 11, 11);
+    color: whitesmoke;
+}
+
+.button button, .button2 button, .button3 button, .buttonLinguagem button{
+    width: 100px;
+    padding: 5px;
+    margin: 1em;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.pergunta2, .button2, .pergunta3, .button3 {
+    display: none;
+}
+
+
