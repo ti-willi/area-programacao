@@ -1,6 +1,5 @@
 body {
-    background: bLack;
-    background-size: auto;
+    background-color: black;
 }
 
 .container {
@@ -9,13 +8,6 @@ body {
     flex-direction: column;
     margin-top: 2em;
 
-}
-
-.pergunta {
-    color: whitesmoke;
-    font-size: 2em;
-    padding-bottom: 1em;
-    padding-top: 1em;
 }
 
 .label {
@@ -31,7 +23,7 @@ body {
     color: whitesmoke;
 }
 
-.button button, .button2 button, .button3 button, .buttonLinguagem button{
+.button, .button-sn button {
     width: 100px;
     padding: 5px;
     margin: 1em;
@@ -44,8 +36,49 @@ body {
     transition: 0.5s;
 }
 
-.pergunta2, .button2, .pergunta3, .button3 {
-    display: none;
+.button:hover, .button-sn button:hover {
+    background-color: black;
+    color: whitesmoke;
+    transform: scale(1.05);
 }
+
+div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.label {
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+}
+
+
+.pergunta2, .pergunta3, .linguagem, .linguagem2 {
+    display: none;
+    margin-top: 2em;
+}
+
+.resultado, .resultado2 {
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 2.5em;
+    display: none;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.button-sn {
+    display: none;
+    margin-top: 20px;
+
+}
+
+
+
 
 

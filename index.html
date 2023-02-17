@@ -9,55 +9,58 @@
 </head>
 <body>
 
-    <div class="container">
+    <div>
 
-        <div class="pergunta1">
-            <p class="pergunta">Você quer seguir para a área de Front-End ou Back-End?</p>            
+        <div class="container">
+
+            <div class="pergunta1" data-pergunta1>
+                <label for="nome" class="label">Você quer seguir para a área de Front-End ou Back-End?</label>
+                <input type="text" id="text1" value="" class="input" data-input1>
+                <button class="button" data-button1>OK</button>
+            <div>
+
+                <div class="pergunta2" data-pergunta2>
+                    <label for="nome" class="label" id="pergunta2">""</label>
+                    <input type="text" id="text" value="" class="input" data-input2>
+                    <button class="button" data-button2>OK</button>
+                </div>
+                
+                <div class="pergunta3" data-pergunta3>
+                    <label for="nome" class="label" id="pergunta3">""</label>
+                    <input type="text" id="text" value="" class="input" data-input3>
+                    <button class="button" data-button3>OK</button>
+                </div>
+    
         </div>
-
-        <div class="button">
-
-            <button data-buttonFront>FRONT-END</button>
-            <button data-buttonBack>BACK-END</button>
-
-        </div>
-
-        <div class="pergunta2" data-pergunta2>
-
-            <p class="pergunta">Escolha a opção que você quer seguir:</p>
-
-        </div>
-
-        <div class="button2" data-button2>
-
-            <button value="react" id="escolha1" data-buttonEscolha>REACT</button>
-            <button value="vue" id="escolha2" data-buttonEscolha>VUE</button>
-
-        </div>
-
-        <div class="button2" data-button3>
-
-            <button value="c#" id="escolha3" data-buttonEscolha>C#</button>
-            <button value="java" id="escolha4" data-buttonEscolha>JAVA</button>
-
-        </div>
-
-        <div class="pergunta3" data-pergunta3>
-
-            <p class="pergunta" id="pergunta3">""</p>
-
-        </div>
-
-        <div class="button3" data-buttonVar>
-
-            <button data-buttonLinguagem>""</button>
-            <button data-buttonFullStack>FULLSTACK</button>
-
-        </div>
-
-        
 
     </div>
+    
+    <div>
+        <p class="resultado" data-resultado>""</p>
+        <p class="resultado" data-escolha>Tem mais alguma tecnologia que você gostaria de aprender?</p>
+    </div>
+
+    <div class="button-sn">
+        <button id="buttonS">SIM</button>
+        <button id="buttonN">NÃO</button>
+    </div>
+
+    <p class="resultado2" data-resultado2>""</p>
+
+    <div class="linguagem" data-linguagem>
+        <label for="nome" class="label" id="perguntaLinguagem">Digite a linguagem que você gostaria de conhecer:</label>
+        <input type="text" id="text" value="" class="input" data-inputLinguagem>
+        <button class="button" data-buttonLinguagem>OK</button>
+    </div>
+
+    <div class="linguagem2" data-linguagem2>
+        <p class="resultado" id="respostaLinguagem2">""</p>
+        <button class="button" data-buttonLinguagem2>OK</button>
+    </div>
+       
+    
+
+    
     
     <script src="main.js"></script>
 </body>
