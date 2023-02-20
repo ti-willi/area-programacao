@@ -9,6 +9,8 @@ const input2 = document.querySelector('[data-input2]');
 const input3 = document.querySelector('[data-input3]');
 const resultado = document.querySelector('[data-resultado]');
 const escolha = document.querySelector('[data-escolha]');
+const buttonResultado = document.querySelector('[data-buttonResultado]');
+const resultado3 = document.querySelector('[data-resultado3]')
 const buttonSN = document.querySelector('.button-sn');
 const buttonSim = document.getElementById("buttonS");
 const buttonNao = document.getElementById("buttonN");
@@ -27,6 +29,14 @@ input1.focus();
 button1.addEventListener ("click", () => {
 
     mostraPergunta2();
+})
+
+input1.addEventListener("keyup", (event) => {
+
+    if(event.code === "Enter") {
+        mostraPergunta2();
+    }    
+
 })
 
 function mostraPergunta2() {
@@ -54,12 +64,21 @@ function mostraPergunta2() {
 button2.addEventListener ("click", () => {
 
     mostraPergunta3();
+
+})
+
+input2.addEventListener("keyup", (event) => {
+
+    if(event.code === "Enter") {
+        mostraPergunta3();
+    }    
+
 })
 
 function mostraPergunta3() {
 
     const alterarPergunta3 = document.getElementById('pergunta3');
-    
+
     alterarPergunta3.textContent = `Você quer seguir se especializando em ${input2.value} ou ser FullStack?`;
     pergunta3.style.display = "flex";
 
@@ -71,6 +90,15 @@ button3.addEventListener ("click", () => {
 
     escondePerguntas();
     mostraResultado();
+})
+
+input3.addEventListener("keyup", (event) => {
+
+    if(event.code === "Enter") {
+        escondePerguntas();
+        mostraResultado();
+    }    
+
 })
 
 function escondePerguntas() {
@@ -94,10 +122,26 @@ function mostraResultado() {
     }
 
     resultado.style.display = "flex";
+    buttonResultado.style.display = "block";
+    
+    
+
+}
+
+buttonResultado.addEventListener("click", () => {
+
+    escolhaSN();
+
+})
+
+function escolhaSN() {
+
+    resultado3.style.display = "none";
     escolha.style.display = "flex"
     buttonSN.style.display = "block"
 
 }
+
 
 buttonSim.addEventListener("click", () => {
 
@@ -122,6 +166,7 @@ function mostraLinguagem() {
 
 }
 
+
 function buttonN() {
 
     const resultado2 = document.querySelector('[data-resultado2]');
@@ -130,7 +175,7 @@ function buttonN() {
     escolha.style.display = "none";
     buttonSN.style.display = "none";
     resultado2.style.display = "block";
-    resultado2.textContent = "Ok";
+    resultado2.textContent = "Ok, foi um prazer conhecê-lo!";
 
 }
 
@@ -148,9 +193,23 @@ function mostraResultado2() {
     linguagem2.style.display = "flex";
     respostaLinguagem2.style.display = "flex";
 
-    respostaLinguagem2.textContent = `${inputUser} é muito legal!`
+    respostaLinguagem2.textContent = `Comece a estudar ${inputUser}!`
     
 }
+
+inputLinguagem.addEventListener("keyup", (event) => {
+
+    if(event.code === "Enter") {
+        const inputUser = inputLinguagem.value
+
+        linguagem2.style.display = "flex";
+        respostaLinguagem2.style.display = "flex";
+    
+        respostaLinguagem2.textContent = `Comece a estudar ${inputUser}!`
+    }
+
+})
+
 
 buttonLinguagem2.addEventListener("click", () => {
 
@@ -159,7 +218,7 @@ buttonLinguagem2.addEventListener("click", () => {
     respostaLinguagem2.style.display = "none";
     resultado.style.display = "none";
    
-    mostraResultado();
+    escolhaSN();
 
     inputLinguagem.value = "";
 
