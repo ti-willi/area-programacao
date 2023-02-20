@@ -193,7 +193,7 @@ function mostraResultado2() {
     linguagem2.style.display = "flex";
     respostaLinguagem2.style.display = "flex";
 
-    respostaLinguagem2.textContent = `Comece a estudar ${inputUser} que você terá uma!`
+    respostaLinguagem2.textContent = `Comece com seus estudos em ${inputUser}!`
     
 }
 
@@ -205,7 +205,7 @@ inputLinguagem.addEventListener("keyup", (event) => {
         linguagem2.style.display = "flex";
         respostaLinguagem2.style.display = "flex";
     
-        respostaLinguagem2.textContent = `Comece a estudar ${inputUser}!`
+        respostaLinguagem2.textContent = `Comece com seus estudos em ${inputUser}!`
     }
 
 })
